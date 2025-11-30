@@ -1,0 +1,720 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    /* Fondo del cuerpo oscuro */
+    background: #0b0b1f; 
+}
+
+/* --- NAV BAR --- */
+nav {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #4a40b9, #512074, #a0208f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.logo-nebula {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.menu a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.menu a:hover,
+.menu a.active { /* Estilo de hover/activo añadido */
+    color: #4ac6ff; 
+    box-shadow: 0 2px 0 0 #4ac6ff; 
+}
+
+/* --- SECCIÓN BANNER --- */
+.banner {
+    width: 100%;
+    height: 45vh;
+    min-height: 520px;
+    margin-top: 60px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('fondo.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.lottie-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    z-index: 10;
+    line-height: 0;
+}
+
+#banner-animation {
+    display: block;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: -5px;
+}
+
+#banner-animation svg {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
+
+/* --- SECCIÓN DE CARACTERÍSTICAS (FEATURE SECTION) --- */
+
+.features-section {
+    padding: 80px 5%;
+    text-align: center; /* Centra el título, subtítulo y el botón CTA */
+    color: #f0f0f0;
+    background-color: #0b0d1e;
+}
+
+.features-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.features-section h2 strong {
+    color: #a0208f;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #bbb;
+    margin-bottom: 50px;
+}
+
+/* Grid para las 3 columnas */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.feature-card {
+    background: #1a1a38;
+    padding: 30px; 
+    border-radius: 12px;
+    border: 1px solid #333366;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    /* SOLUCIÓN DE MARGEN: USAR FLEXBOX */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+/* Contenedor Lottie: Aumentado y con corrección de margen */
+.lottie-space {
+    /* Centrado y espacio solo abajo */
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: block; 
+    
+    /* TAMAÑO AUMENTADO */
+    height: 150px;
+    width: 150px;
+    
+    /* COMPENSACIÓN: Margen negativo para subir el elemento (ajusta -15px si es necesario) */
+    margin-top: -15px; 
+}
+
+/* Forzar al SVG generado por Lottie a eliminar espacios */
+.lottie-space svg {
+    display: block !important;
+    margin: 0 !important;
+}
+
+.feature-card h3 {
+    color: #4ac6ff;
+    font-weight: 600;
+    margin-top: 0; /* Elimina el margen superior que empujaba */
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.feature-card p {
+    color: #ccc;
+    font-size: 0.95em;
+}
+
+/* Botón de Llamada a la Acción (CTA) */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #4a40b9, #a0208f);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s, transform 0.3s;
+    /* Asegura separación del grid de tarjetas y visibilidad */
+    margin-top: 40px; 
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- 3. SECCIÓN EVENTOS CÓSMICOS (AJUSTE DE PROPORCIÓN) --- */
+.cosmic-events-section {
+    padding: 80px 5%;
+    background-color: #151530; 
+    color: #f0f0f0;
+    overflow: hidden; 
+}
+
+.cosmic-events-section .content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    /* Espacio ajustado entre columnas */
+    gap: 30px; 
+    align-items: center;
+    /* Permite que el wrapper se desborde */
+    padding-left: 0; 
+}
+
+/* Columna de Animación (Modificada para Extensión al Borde) */
+.cosmic-animation-wrapper {
+    /* Le damos menos prioridad para ampliar el texto (aprox. 45% del espacio) */
+    flex: 2.5; 
+    
+    /* 🚀 CLAVE DE CAMBIO: AUMENTAR LA ALTURA MÍNIMA PARA DAR ESPACIO A LA ANIMACIÓN */
+    min-height: 800px; /* <--- VALOR AUMENTADO */
+    
+    position: relative;
+    /* Ancho para controlar la proporción */
+    min-width: 400px; 
+    max-width: 600px; 
+    
+    /* CLAVE: Anclar al borde izquierdo de la pantalla */
+    margin-left: calc(-50vw + 50%); 
+}
+
+#cosmic-mega-animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* CLAVE: Eliminar desplazamiento negativo y asegurar inicio en el borde */
+    left: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#cosmic-mega-animation svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Columna de Texto (ampliada) */
+.text-content {
+    /* Le damos más prioridad (aprox. 55% del espacio) */
+    flex: 3; 
+    
+    /* Padding para separar el texto de los bordes */
+    padding-left: 50px; 
+    padding-right: 50px; 
+}
+
+.text-content h3 {
+    color: #4ac6ff;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.text-content h2 {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.text-content h2 strong {
+    color: #a0208f;
+}
+
+.text-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Estilos de los detalles */
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1em;
+}
+
+.event-item i {
+    color: #a0208f;
+    font-size: 1.5em;
+}
+
+/* Estilo del botón secundario */
+.secondary-cta {
+    background: transparent;
+    border: 2px solid #4ac6ff;
+    color: #4ac6ff;
+    padding: 12px 30px;
+}
+
+.secondary-cta:hover {
+    background: #4ac6ff;
+    color: #151530;
+    transform: translateY(-2px);
+}
+
+/* --- RESPONSIVIDAD GENERAL --- */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Para la sección cósmica, apilar elementos */
+    .cosmic-events-section .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-content {
+        padding-left: 0; 
+        padding-right: 0;
+        order: 1; /* Pone el texto primero en móviles */
+    }
+    /* AJUSTES DE RESPONSIVIDAD PARA EL WRAPPER DE ANIMACIÓN */
+    .cosmic-animation-wrapper {
+        order: 2; /* Pone la animación abajo en móviles */
+        flex: 1;
+        min-height: 300px;
+        width: 100%;
+        margin-left: 0; /* Desactiva el truco de extensión al borde en móvil */
+        max-width: none;
+        min-width: 0;
+    }
+    #cosmic-mega-animation {
+        position: static;
+        transform: none;
+        left: 0;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .event-details {
+        align-items: center;
+    }
+}
+
+/* --- 4. SECCIÓN COMUNIDAD Y TESTIMONIOS --- */
+.community-section {
+    padding: 100px 5%;
+    text-align: center;
+    color: #f0f0f0;
+    /* Un color de fondo para distinguirla */
+    background-color: #0b0b1f; 
+}
+
+.community-section h3 {
+    color: #a0208f;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.community-section h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.community-section h2 strong {
+    color: #4ac6ff;
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+/* Diseño de la zona de estadísticas y animación */
+.community-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+/* Contenedor para la Animación */
+.animation-spotlight {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background: #1a1a38;
+    box-shadow: 0 0 20px rgba(74, 64, 185, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+#community-lottie-spotlight {
+    width: 100%;
+    height: 100%;
+}
+
+/* Caja de Estadísticas */
+.stats-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+
+.stat-item {
+    padding: 20px;
+    border-left: 5px solid #a0208f;
+    background: #1a1a38;
+    border-radius: 8px;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #4ac6ff;
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.95em;
+}
+
+/* Contenedor de Testimonios (Slider Placeholder) */
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.testimonial-card {
+    flex: 1;
+    background: #1a1a38;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #333366;
+    text-align: center;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .author {
+    font-weight: 600;
+    color: #4ac6ff;
+    display: block;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .community-grid,
+    .testimonials-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .stats-box {
+        text-align: center;
+    }
+    
+    .stat-item {
+        border-left: none;
+        border-bottom: 3px solid #a0208f;
+    }
+    
+    .animation-spotlight {
+        min-height: 250px;
+    }
+}
+
+/* --- 5. SECCIÓN RECURSOS EXCLUSIVOS --- */
+.resources-section {
+    padding: 100px 5%;
+    text-align: center;
+    color: #f0f0f0;
+    /* Fondo contrastante y llamativo */
+    background-color: #210e3d; 
+}
+
+.resources-header h3 {
+    color: #a0208f;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.resources-header h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.resources-header h2 strong {
+    color: #4ac6ff;
+}
+
+.resources-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+}
+
+/* Columna de Módulos (Izquierda) */
+.resource-modules {
+    flex: 1.5; /* Ocupa menos espacio */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.module-card {
+    background: rgba(43, 10, 80, 0.7); /* Fondo semi-transparente del color de la sección */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid #4a40b9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    z-index: 5;
+}
+
+.module-card h4 {
+    color: #4ac6ff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.module-card i {
+    margin-right: 10px;
+}
+
+/* Posicionamiento Creativo (Efecto "Flotante" o Desalineado) */
+.card-a { transform: translateX(0); }
+.card-b { 
+    transform: translateX(40px); /* Desplaza el segundo módulo */
+    z-index: 10;
+    background: #4a40b9;
+    border-color: #a0208f;
+}
+.card-c { transform: translateX(0); }
+
+/* Columna de Animación (Derecha) */
+.download-spotlight {
+    flex: 1; /* Ocupa más espacio */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#download-lottie-focus {
+    width: 290px;
+    height: 290px;
+    margin-bottom: 30px;
+    /* Fondo para destacar el foco */
+    background: radial-gradient(circle, rgba(160, 32, 143, 0.4), transparent 70%);
+    border-radius: 50%;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .resources-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .resource-modules {
+        flex: 1;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .module-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    /* Eliminar el posicionamiento asimétrico en móvil */
+    .card-a, .card-b, .card-c {
+        transform: none; 
+    }
+
+    .download-spotlight {
+        order: -1; /* Pone la animación encima del texto */
+        padding: 0;
+    }
+}
+
+/* --- SECCIÓN ASTROFOTOGRAFÍA (ELIMINADA) ---
+Todo el CSS de la sección .astrophotography-section ha sido removido. 
+*/
+
+/* ---------------------------------------------------------------------- */
+/* --- 7. FOOTER (PIE DE PÁGINA) --- */
+/* ---------------------------------------------------------------------- */
+footer {
+    background-color: #0d0d29; /* Fondo muy oscuro, ligeramente diferente al body */
+    color: #ccc;
+    padding: 40px 5%;
+    font-size: 0.9em;
+    text-align: center;
+    border-top: 3px solid #1a1a38;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-nebula-footer {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: #4ac6ff;
+    margin-bottom: 20px;
+}
+
+/* Enlaces Sociales */
+.social-links {
+    margin-bottom: 25px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #a0208f;
+}
+
+/* Enlaces Legales/Internos */
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    background-color: rgba(74, 64, 185, 0.3);
+}
+
+.footer-bottom {
+    border-top: 1px solid #1a1a38;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #888;
+}
+
+/* Responsividad para Footer */
+@media (max-width: 600px) {
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

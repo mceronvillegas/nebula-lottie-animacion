@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nebula - Revista de Astronomía</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css"> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <img src="nebula.png" alt="Logo Nebula" class="logo-nebula">
+
+        <div class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#articulos">Artículos</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <div class="banner" id="inicio">
+        <div class="lottie-wrapper">
+            <div id="banner-animation"></div>
+        </div>
+    </div>
+
+    <section class="features-section" id="caracteristicas">
+        <h2>¿Qué hace a Nebula tu guía esencial del Universo?</h2>
+        <p class="subtitle">Descubre el cosmos de una manera divertida, visual y sin fórmulas aburridas.</p>
+
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <div id="lottie-icon-misterios" class="lottie-space">
+                    </div>
+                <h3>Misterios Cósmicos al Día</h3>
+                <p>Te explicamos los agujeros negros, las supernovas y los exoplanetas más recientes con videos e infografías geniales que realmente entenderás.</p>
+            </div>
+            
+            <div class="feature-card animated-feature">
+                <div id="lottie-icon-aprender" class="lottie-space"> 
+                    </div>
+                <h3>Aprende Haciendo</h3>
+                <p>No solo leas; experimenta. Guías prácticas de iniciación a la observación, apps de realidad aumentada y retos mensuales de astrofotografía.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div id="lottie-icon-preguntar" class="lottie-space">
+                    </div>
+                <h3>Pregúntale a un Experto</h3>
+                <p>Accede a sesiones de Q&A en vivo con astrónomos jóvenes y creadores de contenido para resolver tus dudas más locas sobre el universo.</p>
+            </div>
+        </div>
+        
+        <a href="#suscripcion" class="cta-button">¡Explora el Universo Ahora!</a>
+    </section>
+
+    <section class="cosmic-events-section">
+        <div class="content-container">
+            
+            <div class="cosmic-animation-wrapper">
+                <div id="cosmic-mega-animation"></div> 
+            </div>
+
+            <div class="text-content">
+                <h3>Observa el Universo en Vivo</h3>
+                <h2>El Calendario Astronómico que te dice exactamente cuándo mirar</h2>
+                <p>Deja de perderte lluvias de meteoros, eclipses y las mejores conjunciones planetarias. Te damos alertas personalizadas basadas en tu ubicación y el equipo que tienes.</p>
+                
+                <div class="event-details">
+                    <div class="event-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <p>Alertas de eventos clave (Luna Azul, Tránsitos, Eclipses)</p>
+                    </div>
+                    <div class="event-item">
+                        <i class="fas fa-satellite-dish"></i>
+                        <p>Transmisiones en vivo con astrónomos aficionados</p>
+                    </div>
+                    <div class="event-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Mapas de contaminación lumínica para la mejor observación</p>
+                    </div>
+                </div>
+
+                <a href="#eventos-full" class="cta-button secondary-cta">Ver Próximos Eventos</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="community-section">
+        <h3>Conéctate con Exploradores Como Tú</h3>
+        <h2>La Comunidad Nebula en Números y Estrellas</h2>
+        <p class="section-description">Únete a nuestra red global de amantes del cielo. Descubre sus proyectos, comparte tus fotos y encuentra inspiración.</p>
+        
+        <div class="community-grid">
+            
+            <div class="animation-spotlight">
+                <div id="community-lottie-spotlight"></div>
+            </div>
+
+            <div class="stats-box">
+                <div class="stat-item">
+                    <span class="stat-number">25K+</span>
+                    <p class="stat-label">Miembros Activos</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">400+</span>
+                    <p class="stat-label">Proyectos Compartidos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p>"Gracias a Nebula, encontré el grupo de astrofotografía de mi ciudad. ¡Mis fotos de Júpiter nunca se vieron tan bien!"</p>
+                <span class="author">— Sofía R., Madrid</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"La mejor parte es la sección de 'Preguntas a Expertos'. Recibí ayuda directa para configurar mi telescopio."</p>
+                <span class="author">— Carlos M., Bogotá</span>
+            </div>
+        </div>
+        
+        <a href="#unete" class="cta-button primary-cta">Únete a la Comunidad</a>
+    </section>
+
+    <section class="resources-section">
+        <div class="resources-header">
+            <h3>Descargas Premium</h3>
+            <h2>Guías, Ebooks y Wallpapers 4K que te acercan a las estrellas.</h2>
+            <p class="section-description">Solo para nuestros suscriptores: accede a la biblioteca de recursos más completa y diseñada para imprimir o usar en tu escritorio.</p>
+        </div>
+
+        <div class="resources-content-wrapper">
+            
+            <div class="resource-modules">
+                
+                <div class="module-card card-a">
+                    <h4><i class="fas fa-book-open"></i> Guía "Primeros Pasos"</h4>
+                    <p>El ebook esencial para iniciar tu viaje sin frustraciones. Incluye 50 tips de observación.</p>
+                </div>
+                
+                <div class="module-card card-b">
+                    <h4><i class="fas fa-image"></i> Wallpapers Exclusivos</h4>
+                    <p>Fondos de pantalla de nebulosas en resolución 8K para tu móvil y escritorio.</p>
+                </div>
+
+                <div class="module-card card-c">
+                    <h4><i class="fas fa-chart-line"></i> Reporte de la Semana</h4>
+                    <p>Análisis en profundidad de los descubrimientos más importantes en cosmología.</p>
+                </div>
+            </div>
+            
+            <div class="download-spotlight">
+                <div id="download-lottie-focus"></div>
+                <a href="#descargar" class="cta-button primary-cta">Descargar Contenido Gratuito</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer-content">
+            <img src="nebula.png" alt="Logo Nebula Footer" class="logo-nebula-footer">
+            <p class="footer-tagline">Explorando el cosmos, un artículo a la vez.</p>
+            
+            <div class="social-links">
+                <a href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Encuéntranos en Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Mira nuestros videos en YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="footer-links">
+                <a href="#politica">Política de Privacidad</a>
+                <a href="#terminos">Términos de Uso</a>
+                <a href="#ayuda">Ayuda</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nebula Magazine. Todos los derechos reservados. Hecho con ❤️ para la comunidad de astrónomos.</p>
+        </div>
+    </footer>
+    <script>
+        // --- FUNCIÓN BASE PARA CARGAR ANIMACIONES CON BUCLE CONTINUO (Loop Constante) ---
+        function loadSimpleLottie(elementId, jsonPath) {
+            lottie.loadAnimation({
+                container: document.getElementById(elementId),
+                renderer: 'svg',
+                loop: true, 
+                autoplay: true,
+                path: jsonPath
+            });
+        }
+
+        // --- 1. ANIMACIÓN DEL BANNER (Reproducción Única por Recarga) ---
+        lottie.loadAnimation({
+            container: document.getElementById('banner-animation'),
+            renderer: 'svg',
+            loop: false, 
+            autoplay: true, 
+            path: 'texto.json', 
+            rendererSettings: {
+                preserveAspectRatio: 'xMidYMid slice' 
+            }
+        });
+
+        // --- 2. IMPLEMENTACIÓN DEL SCROLL TRIGGER CON REPETICIÓN POR VISTA (Usado en iconos y grafica.json) ---
+        function setupScrollAnimation(anim, elementId) {
+            const targetElement = document.getElementById(elementId);
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Va al frame 0 y reproduce. Si la animación ya terminó, esto la reinicia.
+                        anim.goToAndPlay(0, true); 
+                    } else {
+                        // Pausa cuando sale de la vista
+                        anim.pause(); 
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(targetElement);
+        }
+
+        // --- 2.1. IMPLEMENTACIÓN DEL SCROLL TRIGGER DE UNA SOLA VEZ (para libro.json) ---
+        function setupOneTimeScrollAnimation(anim, elementId) {
+            const targetElement = document.getElementById(elementId);
+            let hasPlayed = false; // Variable para rastrear la reproducción
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasPlayed) {
+                        // Reproduce la animación
+                        anim.goToAndPlay(0, true);
+                        hasPlayed = true; // Marca como reproducida
+
+                        // Opcional: Desconectar el observador después de la primera reproducción
+                        // obs.unobserve(targetElement); 
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(targetElement);
+        }
+
+        // --- 3. CARGA E INICIALIZACIÓN DE ICONOS DE CARACTERÍSTICAS (Scroll Trigger con repetición)
+        const misteriosAnim = lottie.loadAnimation({
+            container: document.getElementById('lottie-icon-misterios'), 
+            renderer: 'svg',
+            loop: false, 
+            autoplay: false, 
+            path: 'icono.json' 
+        });
+        setupScrollAnimation(misteriosAnim, 'lottie-icon-misterios');
+        
+        const aprenderAnim = lottie.loadAnimation({
+            container: document.getElementById('lottie-icon-aprender'),
+            renderer: 'svg',
+            loop: false, 
+            autoplay: false, 
+            path: 'icono2.json' 
+        });
+        setupScrollAnimation(aprenderAnim, 'lottie-icon-aprender'); 
+
+        const preguntarAnim = lottie.loadAnimation({
+            container: document.getElementById('lottie-icon-preguntar'), 
+            renderer: 'svg',
+            loop: false, 
+            autoplay: false, 
+            path: 'icono3.json' 
+        });
+        setupScrollAnimation(preguntarAnim, 'lottie-icon-preguntar'); 
+
+        
+        // --- 4. ANIMACIÓN DEL CALENDARIO ASTRONÓMICO (Loop Continuo - sistemas.json) ---
+        lottie.loadAnimation({
+            container: document.getElementById('cosmic-mega-animation'),
+            renderer: 'svg',
+            loop: true, 
+            autoplay: true, 
+            path: 'sistemas.json', 
+            rendererSettings: {
+                preserveAspectRatio: 'xMidYMid slice'
+            }
+        });
+
+        // ----------------------------------------------------------------------------------
+        // --- 5. ANIMACIÓN SPOTLIGHT COMUNIDAD (grafica.json - Scroll Trigger con repetición) ---
+        // ----------------------------------------------------------------------------------
+        
+        const graficaAnim = lottie.loadAnimation({
+            container: document.getElementById('community-lottie-spotlight'), 
+            renderer: 'svg',
+            loop: false,           
+            autoplay: false,       
+            path: 'grafica.json'
+        });
+        setupScrollAnimation(graficaAnim, 'community-lottie-spotlight');
+
+        // ----------------------------------------------------------------------------------
+        // --- 6. ANIMACIÓN FOCO DE DESCARGA (libro.json - REPRODUCCIÓN ÚNICA) ---
+        // ----------------------------------------------------------------------------------
+        // A. Cargar la animación (sin iniciarla, sin loop)
+        const libroAnim = lottie.loadAnimation({
+            container: document.getElementById('download-lottie-focus'), 
+            renderer: 'svg',
+            loop: false,           // NO repite
+            autoplay: false,       // NO inicia al cargar
+            path: 'libro.json'
+        });
+
+        // B. Aplicar la lógica de scroll trigger: Se reproduce solo si NO ha sido reproducida (One Time)
+        setupOneTimeScrollAnimation(libroAnim, 'download-lottie-focus');
+        
+        // --- LAS ANIMACIONES DE ASTROFOTOGRAFÍA FUERON ELIMINADAS ---
+        
+    </script>
+
+</body>
+
+</html>
